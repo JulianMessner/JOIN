@@ -24,6 +24,8 @@
     border: none;
     border-radius: 30px;
     background-color: #FFFFFF;
+    height: 90vh;
+    overflow-y: auto;
 }
 
 .pop-up-delete-task-container {
@@ -93,6 +95,8 @@
     border: none;
     border-radius: 30px;
     background-color: #FFFFFF;
+    height: 90vh;
+    overflow-y: auto;
 }
 
 .pop-up-add-task-title {
