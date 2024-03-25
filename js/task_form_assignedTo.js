@@ -37,7 +37,7 @@ function checkScreenWidth(){
  * This function turns the arrow-image of the assignedTo-Section upside down
  */
 function flipTheImage(){
-    document.getElementById('assignedToImg').src="/assets/img/arrow_down.png";
+    document.getElementById('assignedToImg').src="../assets/img/arrow_down.png";
 }
 
 /**
@@ -61,7 +61,7 @@ function putAssignedToInForeground() {
 function closecontacts() {
     document.getElementById('assignedToSelect').value = '';
     document.getElementById('overlayContacts').classList.toggle('d-none');
-    document.getElementById('assignedToImg').src="/assets/img/arrow_up.png"
+    document.getElementById('assignedToImg').src="../assets/img/arrow_up.png"
     document.getElementById('ContainerForAllPossibleContacts').innerHTML = '';
     document.getElementById('ContainerForAllPossibleContacts').classList.add('d-none');
     if (chosenContacts.length == 0) {

@@ -19,15 +19,15 @@ function resetPrio() {
     document.getElementById('SubcontentPrio').innerHTML = `
         <div id="Prio1" class="prioclass hover" onclick="choosePrio(1)">
             <div>Urgent</div>
-            <img id="HighImg" src="/assets/img/PrioHigh.png">
+            <img id="HighImg" src="../assets/img/PrioHigh.png">
         </div>
         <div id="Prio2" class="prioclass hover" onclick="choosePrio(2)">
             <div>Medium</div>
-            <img id="MediumImg" src="/assets/img/PrioMedium.png">
+            <img id="MediumImg" src="../assets/img/PrioMedium.png">
         </div>
         <div id="Prio3" class="prioclass hover" onclick="choosePrio(3)">
             <div>Low</div>
-            <img id="LowImg" src="/assets/img/PrioLow.png">
+            <img id="LowImg" src="../assets/img/PrioLow.png">
         </div>
     `;
 }
@@ -65,7 +65,7 @@ function choosePrio(i) {
  * @param {string} Prio - safes the chosen Priority in string-form
  */
 function changeImgOfPrio(Prio) {
-    let img2 = `/assets/img/Prio${Prio}White.png`;
+    let img2 = `../assets/img/Prio${Prio}White.png`;
     document.getElementById(`${Prio}Img`).src = img2;
 }
 
@@ -135,7 +135,7 @@ function showSubtasks() {
     let subtasksList = document.getElementById('subTaskList');
     subtasksList.innerHTML = '';
     for (let i = 0; i < subtasks.length; i++) {
-        subtasksList.innerHTML += `<li>${subtasks[i]['name']} <div class="subtaskContainerEdit"><img class="hover" src="/assets/img/edit-contact.png" onclick="editSubtask(${i})"></img> <img class="hover" onclick="deleteSubtaskInEdit(${i})" src="/assets/img/delete-contact.png"></div> </li>`;
+        subtasksList.innerHTML += `<li>${subtasks[i]['name']} <div class="subtaskContainerEdit"><img class="hover" src="../assets/img/edit-contact.png" onclick="editSubtask(${i})"></img> <img class="hover" onclick="deleteSubtaskInEdit(${i})" src="../assets/img/delete-contact.png"></div> </li>`;
     }
 }
 

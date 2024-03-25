@@ -151,11 +151,11 @@ function logInFormTemplate() {
                 <form id="log-in-form" onsubmit="logIn(); return false;">
                     <div class="input-wrapper">
                         <input type="email" id="email" required placeholder="Email" autofocus>
-                        <img id="email-image" src="/assets/img/email-icon.png">
+                        <img id="email-image" src="../assets/img/email-icon.png">
                     </div>
                     <div class="input-wrapper">
                         <input type="password" id="password" required placeholder="Password" oninput="checkIfEmpty('password', 'password-image')">
-                        <img id="password-image" src="/assets/img/password-icon.png" onclick="togglePasswordVisibility('password', 'password-image')">
+                        <img id="password-image" src="../assets/img/password-icon.png" onclick="togglePasswordVisibility('password', 'password-image')">
                     </div>
                     <p id="error-message" class="hide">Ups! Your login details are incorrect.</p>
                     <div class="remember-me-box">
@@ -180,11 +180,11 @@ function checkIfEmpty(inputId, imageId) {
     let passwordInput = document.getElementById(inputId);
     let passwordImage = document.getElementById(imageId);
     if (passwordInput.value !== '') {
-        changeImageSource(imageId, '/assets/img/password-hidden.png');
+        changeImageSource(imageId, '../assets/img/password-hidden.png');
         passwordImage.style.pointerEvents = 'all';
         passwordImage.style.cursor = 'pointer';
     } else {
-        changeImageSource(imageId, '/assets/img/password-icon.png');
+        changeImageSource(imageId, '../assets/img/password-icon.png');
         passwordImage.style.pointerEvents = 'none';
         passwordInput.type = 'password';
     }
@@ -199,11 +199,11 @@ function togglePasswordVisibility(inputId, imageId) {
     let passwordInput = document.getElementById(inputId);
     if (passwordInput.type === 'password') {
         passwordInput.type = 'text';
-        changeImageSource(imageId, '/assets/img/password-shown.png');
+        changeImageSource(imageId, '../assets/img/password-shown.png');
         passwordInput.focus();
     } else {
         passwordInput.type = 'password';
-        changeImageSource(imageId, '/assets/img/password-hidden.png');
+        changeImageSource(imageId, '../assets/img/password-hidden.png');
     }
 }
 
@@ -260,25 +260,25 @@ function signUpFormTemplate() {
     return/*html*/`
         <div id="form-wrapper">
             <div class="sign-up-box">
-                <button class="arrow-left scale-on-hover" onclick="renderLogIn()"><img src="/assets/img/arrow-left-line.png"></button>
+                <button class="arrow-left scale-on-hover" onclick="renderLogIn()"><img src="../assets/img/arrow-left-line.png"></button>
                 <h1>Sign up</h1>
                 <div class="headline-border"></div>
                 <form id="sign-up-form" onsubmit="validatePassword(); return false;">
                     <div class="input-wrapper">
                         <input type="text" id="name" required placeholder="Name" oninput="checkSignUpForm()" autofocus>
-                        <img id="email-image" src="/assets/img/name-icon.png">
+                        <img id="email-image" src="../assets/img/name-icon.png">
                     </div>
                     <div class="input-wrapper">
                     <input type="email" id="email" required placeholder="Email" oninput="checkSignUpForm()">
-                        <img id="email-image" src="/assets/img/email-icon.png">
+                        <img id="email-image" src="../assets/img/email-icon.png">
                     </div>
                     <div class="input-wrapper">
                         <input type="password" id="password" required placeholder="Password" minlength="8" autocomplete="new-password" oninput="checkIfEmpty('password', 'password-image'); checkSignUpForm();">
-                        <img id="password-image" src="/assets/img/password-icon.png" onclick="togglePasswordVisibility('password', 'password-image')">
+                        <img id="password-image" src="../assets/img/password-icon.png" onclick="togglePasswordVisibility('password', 'password-image')">
                     </div>
                     <div class="input-wrapper">
                         <input type="password" id="confirm-password" required placeholder="Confirm password" oninput="checkIfEmpty('confirm-password', 'confirm-password-image'); checkSignUpForm();">
-                        <img id="confirm-password-image" src="/assets/img/password-icon.png" onclick="togglePasswordVisibility('confirm-password', 'confirm-password-image')">
+                        <img id="confirm-password-image" src="../assets/img/password-icon.png" onclick="togglePasswordVisibility('confirm-password', 'confirm-password-image')">
                     </div>
                     <p id="password-message" class="hide">Ups! Your password doesn't match.</p>
                     <div class="privacy-policy-box">

@@ -107,12 +107,12 @@ function generateEditTaskHtml(taskToEdit) {
                 </div>
             </div>
             <div class="edit-assign-container">
-                <label for="edit-contacts">Assignet to:</label>
+                <label for="edit-contacts">Assigned to:</label>
                 <div id="SubcontentContacts" class="Subcontent">
                     <div class="assignedToContainerInput assignedToContainerInputEdit" onclick="getAllContacts('assignedToSelect')">
                         <input id="assignedToSelect" class="selection hover arrowdown" autocomplete="off"
                             placeholder="Select contacts to assign" onkeyup="filterContacts()"><img
-                            id="assignedToImg" class="arrow" src="/assets/img/arrow_up.png">
+                            id="assignedToImg" class="arrow" src="../assets/img/arrow_up.png">
                     </div>
                     <div id="ContainerForAllChosenContacts" class="ContainerForAllChosenContacts d-none">
                     </div>

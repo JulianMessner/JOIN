@@ -86,9 +86,9 @@ function changeNavigationHighlight(id) {
  * @param {element} newHighlighted - The navigation element to be highlighted.
  */
 function checkIfOnHelpSite(id, newHighlighted) {
-    if (newHighlighted.firstElementChild.src !== `${getProtocol()}//${getHost()}/assets/img/question-mark-icon.png`) {
+    if (newHighlighted.firstElementChild.src !== `../assets/img/question-mark-icon.png`) {
         newHighlighted.classList.add('active');
-        newHighlighted.firstElementChild.src = `${getProtocol()}//${getHost()}/assets/img/${id}-icon-white.png`;
+        newHighlighted.firstElementChild.src = `../assets/img/${id}-icon-white.png`;
     }
 }
 
